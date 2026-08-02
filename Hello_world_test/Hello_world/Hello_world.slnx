@@ -4,5 +4,6 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="../Build Process/Build Process.vcxproj" Id="9169a4ac-8c0d-4b8e-9fd0-f3da7b79e665" />
+  <Project Path="../IO (input - output)/IO (input - output).vcxproj" Id="9c7b427b-75ab-478e-91ec-fc25d4121610" />
   <Project Path="Hello_world.vcxproj" Id="0fe16b33-c8ae-4c9f-be37-fda92152a35c" />
 </Solution>
