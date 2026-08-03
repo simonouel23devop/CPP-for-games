@@ -27,7 +27,7 @@ int main() {
 	std::cout << "" << std::endl;
 	std::cout << "" << std::endl;
 
-
+	// condition to limit the number of attempts.
 
 	const int maxAttempts = 3;
 	for (int attempt = 1; attempt <= maxAttempts; ++attempt) {
@@ -76,7 +76,7 @@ int main() {
 				std::cout << "Please try again (" << (maxAttempts - attempt) << " attempts left)." << std::endl;
 			}
 		}
-	}
+	}// If the loop ends without granting access, it means maximum attempts were reached.
 	std::cout << "" << std::endl;
 	std::cout << "Maximum attempts reached. Access denied." << std::endl;
 	return 1;
