@@ -20,8 +20,8 @@ int main()
 	short max_short = 32767; // Maximum value for a 16-bit signed integer (8bits x 2  = 2 bytes = 16 bits)
 	short min_short = -32768; // Minimum value for a 16-bit signed integer (8bits x 2  = 2 bytes = 16 bits)
 	
-	unsigned max_ushort = 0xFFFFF; // Maximum value for a 16-bit unsigned integer (8bits x 2  = 2 bytes = 16 bits)
-	unsigned min_ushort = 0; // Minimum value for a 16-bit unsigned integer (8bits x 2  = 2 bytes = 16 bits)
+	unsigned short max_ushort = 0xFFFFF; // Maximum value for a 16-bit unsigned integer (8bits x 2  = 2 bytes = 16 bits)
+	unsigned short min_ushort = 0; // Minimum value for a 16-bit unsigned integer (8bits x 2  = 2 bytes = 16 bits)
 
 	std::cout << "Size of short: " << sizeof(short) << " bytes" << std::endl;
 
