@@ -37,7 +37,7 @@ int main() {
 
 		// If name is empty (possible if previous extraction left a newline), read again
 		if (name.empty()) {
-			std::getline(std::cin, name);
+			break;
 		}
 
 		// Ask for user's age
