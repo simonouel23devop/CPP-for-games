@@ -6,7 +6,7 @@
 
 
 struct HighScore {
-    char name[16]; // fixed-size buffer for binary records
+    char name[17]; // fixed-size buffer for binary records
     uint32_t score;
 };
 
