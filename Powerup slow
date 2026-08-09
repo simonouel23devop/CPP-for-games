@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "Powerupslow.generated.h"
+
+using namespace std;
+
+int main() {
+
+Powerupslow class
+Private:
+
+float originalspeed = 100.00;
+float lessspeed = -36.00;
+
+return 0
+
+}
