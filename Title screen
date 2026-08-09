@@ -1,0 +1,18 @@
+//Title scene 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string input;
+
+cout<<"Appuyez sur start pour démarrer";
+
+getline(cin, input);
+
+cout<<"Bienvenue et bonne route !;
+
+return 0;
+
+}
