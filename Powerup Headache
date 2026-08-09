@@ -12,7 +12,7 @@ Headache class
 Private:
 
 float originalhealth = 100.00;
-float lesshealth = -25.00;
+float lesshealth = -25.00f;
 
 return 0
 
