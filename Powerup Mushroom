@@ -12,7 +12,7 @@ Mushroom class
 Private:
 
 float originalspeed = 100.00;
-float lessspeed = -36.00;
+float lessspeed = -36.00f;
 
 return 0
 
