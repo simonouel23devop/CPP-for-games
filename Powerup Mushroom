@@ -2,13 +2,13 @@
 #include <string>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Powerupslow.generated.h"
+#include "Mushroom.generated.h"
 
 using namespace std;
 
 int main() {
 
-Powerupslow class
+Mushroom class
 Private:
 
 float originalspeed = 100.00;
