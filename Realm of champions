@@ -16,8 +16,8 @@ float mapwidthsize = 250.00f
 
 maprealofchampions<vector<<heightsize<<vector<widthsize;
 
-maprealmofchampions [1][1] = rock;
-maprealmofchampions [2][2] = water;
+maprealmofchampions [1][1]:: rock;
+maprealmofchampions [2][2]:: water;
 
 return 0;
 
