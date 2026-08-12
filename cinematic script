@@ -8,13 +8,13 @@ int main() {
 cout <<"Dans un monde ou tout part en fumée , tout rate , tout est la pour divertir quel en soit les conséquences...";//Gros plan sur les spectateurs qui crient de joie...
 break;
   
-cout <<"Mais ...la furie elle est éternelle !"//Gros plan sur les véhicules.;
+cout <<"Mais ...la furie elle est éternelle !"//Gros plan sur les véhicules qui chargent.;
 break;
   
 cout <<"Prendrez-vous le prix , ou succomberez-vous à la mort ?" ;//Gros plan sur les carcasses mortes des véhicules...
 break;
 
-cout <<" Bienvenue à Speedaracia !";
+cout <<" Bienvenue à Speedaracia !";//Plan sur le ciel ouvert et les voitures...
 break;
 
 
