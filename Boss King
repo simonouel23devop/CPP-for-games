@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+
+class hachette 
+private:
+
+int sizeheight = 20;
+int sizewidth = 50;
+
+class bossking
+private:
+
+float sizeheight = 35.00;
+float sizewidth = 60.00f;
+
+class buckler
+private:
+
+int sizeheight = 30;
+int sizewidth = 30;
+
+class armorboss
+private:
+
+int sizeheight = 40;
+int sizewidth= 35;
+
+
+return 0;
+
+}
