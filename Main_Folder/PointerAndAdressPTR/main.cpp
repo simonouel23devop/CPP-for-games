@@ -63,19 +63,15 @@ int main()
 		std::cout << "The value of a is not equal to the value pointed to by pi." << std::endl;
 	}
 
-	// Now let's print out the letters of the name "Simon" using pointer arithmetic
+	// Now let's print out the letters of the name "Simon" using pointer arithmetic.
 	std::cout << "The first letter of the name is in Simon: " << name[0] << std::endl;
 	std::cout << "The second letter of the name is in Simon: " << name[1] << std::endl;
 	std::cout << "The third letter of the name is in Simon: " << name[2] << std::endl;
 
 
-	int& ref_a = a; // reference to a = 10 which take the value of a and store it in ref_a new value from *pi = 10
+	int& ref_a = a; // reference to a = 10 which take the value of a and store it in ref_a new value from *pi = 10.
 	std::cout << "The value of a is: " << a << std::endl;
 	
-
-
-
-
 
 	return 0;
 }
