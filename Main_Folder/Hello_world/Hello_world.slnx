@@ -11,6 +11,7 @@
   <Project Path="../Float/Float.vcxproj" Id="d285f1d1-3039-4d6d-b830-245d2ef1ab47" />
   <Project Path="../Integrals/Integrals.vcxproj" Id="0577b33c-d4a0-4b6d-9f8f-6ef26afb3ea6" />
   <Project Path="../IO (input - output)/IO (input - output).vcxproj" Id="9c7b427b-75ab-478e-91ec-fc25d4121610" />
+  <Project Path="../PointerAndAdressPTR/PointerAndAdressPTR.vcxproj" Id="a5d4c094-bcc0-4146-ae44-5c5ed8d25390" />
   <Project Path="../Type-conversion/Type-conversion.vcxproj" Id="8da9fce6-bd1f-4e30-bcd4-d7a32b8f0b19" />
   <Project Path="Hello_world.vcxproj" Id="0fe16b33-c8ae-4c9f-be37-fda92152a35c" />
 </Solution>
