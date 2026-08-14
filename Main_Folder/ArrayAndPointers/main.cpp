@@ -53,7 +53,7 @@ int main()
 		
 	};
 
-	delete[] pvalues; // free the allocated memory for the 1D array
+	delete[] pvalues; // free the allocated memory for the 1D array.
 
 	return 0;
 }
