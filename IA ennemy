@@ -1,0 +1,43 @@
+//Intelligence de l'ennemi IA...
+#include <iostream>
+#include <string>
+#include <random> //Utilisation de Mersenne Twister engine...
+
+using namespace std; //On élimine les std...
+
+
+int main() { // Démarrage du programme...
+
+class intelligence
+private:
+attaquer,
+patrouiller,
+fuir
+
+class ennemi 
+private:
+int pointsdevie = 300;
+
+mt19937 generateur{random_device{}()}; // Générateur de graine avec le chiffre aléatoire de Mersenne Twister engine...
+
+discrete_distribution<int> distribution({30, 40, 10}); //distribution aléatoire de pourcentage des actions...
+
+switch action ;
+
+case action attaquer 
+cout("L'ennemi attaque");
+
+case action patrouiller
+cout("L'ennemi patrouille");
+
+case action fuir
+cout("L'ennemi fuit");
+
+
+return 0;
+
+}
+
+
+
+
