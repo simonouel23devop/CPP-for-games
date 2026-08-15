@@ -22,16 +22,23 @@ mt19937 generateur{random_device{}()}; // Générateur de graine avec le chiffre
 
 discrete_distribution<int> distribution({30, 40, 10}); //distribution aléatoire de pourcentage des actions...
 
-switch action ;
 
-case action attaquer 
+int main() {
+    int orquebleu = 1;
+
+switch (action) {
+
+case action attaquer:
 cout("L'ennemi attaque");
+break;
 
-case action patrouiller
+case action patrouiller:
 cout("L'ennemi patrouille");
+break;
 
-case action fuir
+case action fuir:
 cout("L'ennemi fuit");
+break;
 
 
 return 0;
