@@ -1,5 +1,5 @@
-#include <iostream> //Ouverture des chevrons...
-#include <array> // pour les pointeurs 2d...
+#include <iostream> 
+#include <array>
 
 
 int main()
