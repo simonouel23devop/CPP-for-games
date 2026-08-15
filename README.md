@@ -1,3 +1,3 @@
-# CPP for games
-Folder for C++
-Test ongoing
+Le projet est actuellement en cours ...
+Des lignes de code c++ sont rédigées et révisées chaque semaine par Simon et François Ouellet.
+Voila ...
