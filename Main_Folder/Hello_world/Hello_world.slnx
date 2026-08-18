@@ -5,6 +5,7 @@
   </Configurations>
   <Project Path="../ArrayAndPointers/ArrayAndPointers.vcxproj" Id="e4ff3d09-8dd7-41e5-b901-eec832fbb01f" />
   <Project Path="../Auto/Auto.vcxproj" Id="45bf60a1-3058-4f93-9934-6d331757bbc0" />
+  <Project Path="../BitwiseOperator/BitwiseOperator.vcxproj" Id="adb51d9b-d706-4c11-8f28-5a44119e4757" />
   <Project Path="../Build Process/Build Process.vcxproj" Id="9169a4ac-8c0d-4b8e-9fd0-f3da7b79e665" />
   <Project Path="../Characters/Characters.vcxproj" Id="abb2d88f-767e-4aa6-bddf-e936fa7cfe71" />
   <Project Path="../Enums/Enums.vcxproj" Id="6a986cc0-a9f3-4109-a23c-33aa1afb43f3" />
