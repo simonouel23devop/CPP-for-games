@@ -12,6 +12,7 @@
   <Project Path="../File IO/File IO.vcxproj" Id="69a494be-8ff9-4a48-9f53-ab5f2ee00d5d" />
   <Project Path="../Float/Float.vcxproj" Id="d285f1d1-3039-4d6d-b830-245d2ef1ab47" />
   <Project Path="../Flow control/Flow control.vcxproj" Id="538062b2-3c09-44b6-872a-90fc72fb76b5" />
+  <Project Path="../Functions/Functions.vcxproj" Id="e3ed579d-d423-4403-9d06-10af22120ab6" />
   <Project Path="../Integrals/Integrals.vcxproj" Id="0577b33c-d4a0-4b6d-9f8f-6ef26afb3ea6" />
   <Project Path="../IO (input - output)/IO (input - output).vcxproj" Id="9c7b427b-75ab-478e-91ec-fc25d4121610" />
   <Project Path="../OperatorAndOperand/OperatorAndOperand.vcxproj" Id="d36464ea-48b1-4dc5-b864-414014fc4b7c" />
