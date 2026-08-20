@@ -23,7 +23,7 @@ int main() {
 
 	int c = max(&a, &b);
 
-	std::cout << "c = " << c << std::endl; // print the results
+	std::cout << "c = " << c << std::endl; // print the results..
 
 	return 0;
 }
