@@ -223,7 +223,7 @@ private:
 	// Armor worn by this player.
 	Armor armor;
 
-	// Buff state
+	// Buff state.
 	int activeBuffDamage;
 	int remainingBuffAttacks;
 	int maxHitpoints;
