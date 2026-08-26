@@ -4,6 +4,37 @@
 #include <thread>
 #include <chrono>
 #include <random>
+#include <sstream>
+#include <vector>
+
+namespace PlayerEncoder { inline std::string escape(const std::string& in)
+{
+	std::string out;
+	out.reserve(in.size());
+	for (char c : in)
+	{
+		if (c == '|') out += "\\|";
+		else if (c == '\\') out += "\\\\";
+		else out += c;
+	}
+	return out;
+}
+
+inline std::string unescape(const std::string& in)
+{
+	std::string out;
+	out.reserve(in.size());
+	for (size_t i = 0; i < in.size(); ++i)
+	{
+		if (in[i] == '\\' && i + 1 < in.size())
+		{
+			++i;
+			out += in[i];
+		}
+		else out += in[i];
+	}
+	return out;
+} }
 // Simple class representing an entity with hitpoints
 class Entity
 {
@@ -171,6 +202,18 @@ public:
 	const std::string& getName() const { return name; }
 	bool isAlive() const { return gethitpoints() > 0; }
 
+	// Public accessors used by the serializer
+	Weapon getWeapon() const { return weapon; }
+	Armor getArmor() const { return armor; }
+	int getActiveBuffDamage() const { return activeBuffDamage; }
+	int getRemainingBuffAttacks() const { return remainingBuffAttacks; }
+	int getHealCharges() const { return healCharges; }
+
+	// Mutators used by the serializer to restore state
+	void setBuffState(int active, int remaining) { activeBuffDamage = active; remainingBuffAttacks = remaining; }
+	void setHealCharges(int c) { healCharges = c; }
+	void setHitpoints(int hp) { hitpoints = hp; }
+
 	// Heal the player by amount up to their max hitpoints. Returns actual healed amount.
 	int heal(int amount)
 	{
@@ -229,6 +272,72 @@ private:
 	int maxHitpoints;
 	int healCharges;
 };
+
+// Provide encoder/decoder implementations now that Player is fully defined.
+
+namespace PlayerEncoder
+{
+	std::string encode(const Player& p)
+	{
+		std::ostringstream oss;
+		oss << escape(p.getName()) << "|";
+		oss << p.gethitpoints() << "|";
+		oss << p.getMaxHitpoints() << "|";
+		Weapon w = p.getWeapon();
+		oss << escape(w.name) << "|" << w.damage << "|";
+		Armor a = p.getArmor();
+		oss << escape(a.name) << "|" << a.defense << "|";
+		oss << p.getActiveBuffDamage() << "|" << p.getRemainingBuffAttacks() << "|" << p.getHealCharges();
+		return oss.str();
+	}
+
+	Player decode(const std::string& s)
+	{
+		std::vector<std::string> parts;
+		parts.reserve(12);
+		std::string cur;
+		for (size_t i = 0; i < s.size(); ++i)
+		{
+			if (s[i] == '\\' && i + 1 < s.size())
+			{
+				cur += s[i+1];
+				++i;
+			}
+			else if (s[i] == '|')
+			{
+				parts.push_back(cur);
+				cur.clear();
+			}
+			else cur += s[i];
+		}
+		parts.push_back(cur);
+
+		auto getInt = [&](size_t idx, int def = 0) -> int {
+			if (idx >= parts.size() || parts[idx].empty()) return def;
+			try { return std::stoi(parts[idx]); } catch (...) { return def; }
+		};
+
+		std::string name = (parts.size() > 0) ? parts[0] : std::string("Player");
+		int hit = getInt(1, 0);
+		int maxHit = getInt(2, hit);
+		std::string wname = (parts.size() > 3) ? parts[3] : std::string("Fire sword");
+		int wdamage = getInt(4, 50);
+		std::string aname = (parts.size() > 5) ? parts[5] : std::string("Cloth");
+		int adef = getInt(6, 0);
+		int activeBuff = getInt(7, 0);
+		int remainingBuff = getInt(8, 0);
+		int heals = getInt(9, 0);
+
+		Weapon w( unescape(wname), wdamage );
+		Armor a( unescape(aname), adef );
+		Player p(hit, unescape(name), w, a);
+		p.setHitpoints(hit);
+		p.setBuffState(activeBuff, remainingBuff);
+		p.setHealCharges(heals);
+		return p;
+	}
+
+}
 
 // Free function that prints the hitpoints of an Entity passed by const reference.
 // Passing by const reference avoids copying the object and prevents modification.
@@ -301,6 +410,7 @@ int main()
 
 	Player p1(80, "Aria", Weapon("Longsword", 35), Armor("Chain", 4));
 	Player p2(75, "Drake", Weapon("Battle Axe", 40), Armor("Leather", 2));
+	// Patch placeholder - no behavioral changes
 
 	p1.describe();
 	p2.describe();
