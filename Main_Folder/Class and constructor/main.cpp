@@ -6,7 +6,7 @@
 #include <random>
 #include <sstream>
 #include <vector>
-
+// for the PlayerEncoder.h //
 namespace PlayerEncoder { inline std::string escape(const std::string& in)
 {
 	std::string out;
