@@ -7,7 +7,7 @@
 #include <type_traits>
 #include <stdexcept>
 
-template<typename T>
+template<typename T> // typename T
 class BinaryPrinter {
 public:
 	// Construct with a value to allow both printing and indexed access.
@@ -65,9 +65,9 @@ private:
 	bool value_;
 };
 
-// alias template improves readability.
+// alias template improves readability//
 template<typename T>
-using BinPrinter = BinaryPrinter<T>;
+using BinPrinter = BinaryPrinter<T>; // typename T
 
 // Explicit template instantiation: force the compiler to instantiate the
 // template (and emit the necessary code) for these commonly-used types in
