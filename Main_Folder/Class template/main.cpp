@@ -9,7 +9,7 @@
 
 template<typename T> // typename T
 class BinaryPrinter {
-public:
+public: // public class binaryPrinter
 	// Construct with a value to allow both printing and indexed access.
 	// Uses std::make_unsigned_t to ensure bitwise shifts are defined
 	explicit BinaryPrinter(T value)
