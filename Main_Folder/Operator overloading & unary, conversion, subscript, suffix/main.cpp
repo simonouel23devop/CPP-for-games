@@ -65,21 +65,7 @@
      friend std::ostream& operator<<(std::ostream& os, const Point& p);
     };
 
-// User-defined literal for Vector2D
-// Allows creating vectors with a concise literal syntax from string literals,
-// e.g. "3.3,4.4"_v. This improves readability for fixed vector constants and
-// keeps initialization next to the value (useful for tests/examples/configs).
-// The literal parses two comma-separated numbers from the string literal.
-inline Vector2D operator"" _v(const char* str, std::size_t len) {
-    std::string s(str, len);
-    auto pos = s.find(',');
-    if (pos == std::string::npos) {
-        throw std::invalid_argument("Vector literal must be in format 'x,y'");
-    }
-    double a = std::stod(s.substr(0, pos));
-    double b = std::stod(s.substr(pos + 1));
-    return Vector2D(a, b);
-}
+// (User-defined literal moved below Vector2D definition)
 
     // Definition of the non-member overloaded '<<' operator
     std::ostream& operator<<(std::ostream& os, const Point& p) {
@@ -110,7 +96,7 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
         }
 
         // Array subscript operator
-        // Allows accessing components by index like v[0] for x and v[1] for y.
+        // Allows accessing components by index like v[0] for x and v[1] for y. Array
         // This makes the Vector2D behave like a small fixed-size array and
         // improves interoperability with algorithms that use indexing.
         // We provide both const and non-const overloads and throw on invalid index.
@@ -128,7 +114,7 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
 
         // Overloading the assignment operator
         // This allows assigning one Vector2D to another (e.g., v4 = v3).
-        // It performs a self-assignment check and returns *this to allow
+        // It performs a self-assignment check and returns * pointer this to allow
         // chained assignments like a = b = c;
         Vector2D& operator=(const Vector2D& other) {
             if (this != &other) {
@@ -150,7 +136,7 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
             other.x = 0.0; other.y = 0.0;
         }
 
-        // Move assignment
+        // Move assignment to another.
         Vector2D& operator=(Vector2D&& other) noexcept {
             if (this != &other) {
                 this->x = other.x;
@@ -177,6 +163,20 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
 
     };
 
+
+// User-defined literal for Vector2D
+// Allows creating vectors with a concise literal syntax from string literals,
+// The literal parses two comma-separated numbers from the string literal.
+inline Vector2D operator"" _v(const char* str, std::size_t len) {
+    std::string s(str, len);
+    auto pos = s.find(',');
+    if (pos == std::string::npos) {
+        throw std::invalid_argument("Vector literal must be in format 'x,y'");
+    }
+    double a = std::stod(s.substr(0, pos));
+    double b = std::stod(s.substr(pos + 1));
+    return Vector2D(a, b);
+}
 
      // overload operator +
     int main() {
@@ -223,7 +223,7 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
         std::cout << "vneg (unary - on v4): (" << vneg.x << ", " << vneg.y << ")\n";
         // Demonstrate array subscript operator
         std::cout << "v4[0] = " << v4[0] << ", v4[1] = " << v4[1] << std::endl;
-        // Modify components using subscript operator
+        // Modify components using subscript operator via array.
         v4[0] = -7.7; v4[1] = 8.8;
         std::cout << "v4 (after subscript assignment): (" << v4[0] << ", " << v4[1] << ")\n";
         // Demonstrate comparison operators
