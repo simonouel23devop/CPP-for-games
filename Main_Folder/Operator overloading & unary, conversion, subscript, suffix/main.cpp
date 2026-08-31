@@ -213,7 +213,7 @@ inline Vector2D operator"" _v(const char* str, std::size_t len) {
         std::cout << "The point is: " << p1 << std::endl;
         std::cout << "p2 (after assignment): " << p2 << std::endl;
 
-        // Demonstrate copy and move for Vector2D
+        // Demonstrate copy and move for Vector2D //
         Vector2D v5 = v3; // copy constructor
         std::cout << "v5 (copy) address: " << &v5 << ", value: (" << v5.x << ", " << v5.y << ")\n";
         Vector2D v6 = std::move(v3); // move constructor
