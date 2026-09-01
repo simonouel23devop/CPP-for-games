@@ -16,8 +16,6 @@ enum class ErrorCode {
 };
 
 // processData simulates an operation that may fail for a few reasons.
-// It returns bool to indicate overall success. When an error occurs it
-// sets outError and calls the onError callback so the caller can decide
 // how to log or display the error (decoupled reporting).
 bool processData(const std::string& filename,
 				 int value,
