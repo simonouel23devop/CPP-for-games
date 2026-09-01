@@ -11,6 +11,7 @@
   <Project Path="../Class and constructor/Class and constructor.vcxproj" Id="ef7d125d-a4b5-400e-a488-c54955178b30" />
   <Project Path="../Class template/Class template.vcxproj" Id="627beb6f-da40-4a95-9fb5-5ff71f8bbbea" />
   <Project Path="../Enums/Enums.vcxproj" Id="6a986cc0-a9f3-4109-a23c-33aa1afb43f3" />
+  <Project Path="../Error handling and callback function/Error handling and callback function.vcxproj" Id="f92ebf79-e111-41a7-9761-680dee261af0" />
   <Project Path="../File IO/File IO.vcxproj" Id="69a494be-8ff9-4a48-9f53-ab5f2ee00d5d" />
   <Project Path="../Float/Float.vcxproj" Id="d285f1d1-3039-4d6d-b830-245d2ef1ab47" />
   <Project Path="../Flow control/Flow control.vcxproj" Id="538062b2-3c09-44b6-872a-90fc72fb76b5" />
